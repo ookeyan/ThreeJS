@@ -1,4 +1,30 @@
 .App{
   width: 100vw;
   height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
 }
+.configurator{
+  position: fixed;
+  right: 24px;
+  width: 320px;
+  bottom: 25vh;
+  color: whitesmoke;
+  padding: 16px;
+}
+.configurator_section_title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.configurator_section_values{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.item_label{
+  font-size: 1rem; 
+  color: #acacac
+}
+

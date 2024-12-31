@@ -1,5 +1,6 @@
 import React from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
+import * as THREE from 'three'
 
 const Book =(props)=> {
   const { nodes, materials } = useGLTF('/models/book/book.gltf')
@@ -17,9 +18,19 @@ const Book =(props)=> {
     aoMap: '/texture/leather/Leather_004_OCC.png',
   })
 
+  stylized.map.repeat.set(2, 2);
+  stylized.normalMap.repeat.set(2, 2);
+  stylized.roughnessMap.repeat.set(2, 2);
+  stylized.metallicMap.repeat.set(2, 2);
+
+  stylized.map.wrapS = stylized.map.wrapT = 
+  stylized.roughnessMap.wrapS = stylized.roughnessMap.wrapT = 
+  stylized.normalMap.wrapS = stylized.normalMap.wrapT = 
+  stylized.metallicMap.wrapS = stylized.metallicMap.wrapT = 
+    THREE.RepeatWrapping;
+
   const ThinSheet = (props) => {
-    const texture = useTexture('/texture/stylized_book/madina.png')
-  
+    const texture = useTexture('/texture/stylized_book/madina.png') 
     return (
       <mesh {...props}>
         <planeGeometry args={[0.71, 1, 1]} />
@@ -28,10 +39,9 @@ const Book =(props)=> {
     )
   }
 
-
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={4}>
+      <group rotation={[-Math.PI / 2, 0, 0]} scale={3}>
         <mesh geometry={nodes.Architexture_0.geometry} material={materials.Architexture}>
             <meshStandardMaterial{...stylized}/>
         </mesh> 
