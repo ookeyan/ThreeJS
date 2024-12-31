@@ -1,0 +1,11 @@
+Model Information:
+* title:	Plain Pizza Slice
+* source:	https://sketchfab.com/3d-models/plain-pizza-slice-486238438ec64c3cb64d607a30d1a9e6
+* author:	inciprocal (https://sketchfab.com/inciprocal.com)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Plain Pizza Slice" (https://sketchfab.com/3d-models/plain-pizza-slice-486238438ec64c3cb64d607a30d1a9e6) by inciprocal (https://sketchfab.com/inciprocal.com) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
