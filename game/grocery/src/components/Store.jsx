@@ -1,6 +1,8 @@
-import { PresentationControls, Center, useTexture} from "@react-three/drei";
+import { PresentationControls, Stage, useTexture, OrbitControls} from "@react-three/drei";
 import { Suspense } from "react";
 import * as THREE from "three";
+import Wall from "./Wall";
+import Cart from "./Cart";
 
 function Floor() {
   const flo = useTexture({
@@ -31,23 +33,33 @@ function Floor() {
     </mesh>
   )
 }
-const Shelf = () =>{
+
+
+
+
+const Store = () =>{
     return (
       <>
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={1} />
       <directionalLight position={[10, 10, 5]} intensity={1.5} />
+      <OrbitControls />
 
       <PresentationControls speed={1.5} global zoom ={0.7} polar={[-0.1, Math.PI/2]}>
-        <Center environment={"city"} intensity={0.6} contactShadow={false}>
+        <Stage environment={"city"} intensity={0.6} contactShadow={false}>
           <mesh position={[0,3.75,0]}>
             <boxGeometry/>
             <meshNormalMaterial/>
           </mesh> 
-        </Center>
-        <Suspense fallback={null}>
+          <Cart position={[1, 0.3, 0]}/>
+          <Cart position={[5, 0.3, 0]}/>
           <Floor/>
+        </Stage>
+        <Suspense fallback={null}>
+          
+
+          {/* <Wall/> */}
         </Suspense>
       </PresentationControls>
       </> );
 };
-export default Shelf;
+export default Store;

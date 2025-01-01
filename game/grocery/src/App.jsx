@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import Shelf from './components/Shelf';
+import Store from './components/Store';
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='App'>
       <Canvas>
-        <Shelf/>
+        <Store/>
       </Canvas>
     </div>
   )
